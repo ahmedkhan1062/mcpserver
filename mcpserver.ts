@@ -53,6 +53,14 @@ server.addPrompt({
   },
 });
 
+server.addPrompt({
+  name: "git-release-notes",
+  description: "Generate release notes for latest commit",
+  load: async (args) => {
+    return `Please generate comprehensive and professional release notes based on the latest commits to github. save these release notes inside a folder called "release-notes". the saved file should be called 'release-notes.txt'`;
+  },
+});
+
 
 // Resources
 
