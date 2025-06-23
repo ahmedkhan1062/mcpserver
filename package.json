@@ -1,0 +1,31 @@
+{
+  "name": "research-mcp-server",
+  "version": "1.0.0",
+  "description": "Research MCP Server for arXiv papers",
+  "type": "module",
+  "main": "dist/server.js",
+  "bin": {
+    "research-mcp": "./dist/server.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && chmod 755 dist/server.js",
+    "start": "node dist/server.js",
+    "dev": "ts-node server.ts",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "fastmcp": "^3.4.0",
+    "xml2js": "^0.6.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/xml2js": "^0.4.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^5.0.0"
+  }
+}

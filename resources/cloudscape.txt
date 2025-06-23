@@ -1,0 +1,455 @@
+# Amazon Cloudscape Design System - Complete Component Inventory
+
+## Overview
+Amazon Cloudscape Design System is an open-source React-based design system created by AWS in 2016 for building intuitive, engaging, and inclusive user experiences at scale. Originally developed for the AWS Management Console, it now offers 60+ components, 30+ pattern guidelines, and 20+ demos for creating web applications with consistent AWS-style interfaces.
+
+## Component Categories & Complete List (89 Components)
+
+### LAYOUT & STRUCTURE COMPONENTS
+
+**App Layout**
+- **Purpose**: Provides page structure for general use cases
+- **Description**: Offers collapsible side navigation, tools panel, drawers, and split panel for standard application layouts
+- **Features**: Responsive design, accessibility support, consistent structure
+
+**App Layout Toolbar**  
+- **Purpose**: Provides page structure for productive use cases
+- **Description**: Similar to App Layout but optimized for data-heavy applications with toolbar-style interface
+- **Features**: Collapsible side navigation, tools panel, drawers, split panel in toolbar format
+
+**Container**
+- **Purpose**: Groups related content pieces together  
+- **Description**: Presents content indicating items are related (e.g., tables are a type of container)
+- **Features**: Visual grouping, semantic organization
+
+**Box**
+- **Purpose**: Display and style basic elements and containers
+- **Description**: Complies with Cloudscape's typography and spacing strategy for consistent layouts
+- **Features**: Typography compliance, spacing strategy adherence
+
+**Grid**
+- **Purpose**: Distributes content across page layouts
+- **Description**: Builds consistent, balanced, and responsive layouts using 4px base unit system
+- **Features**: Responsive breakpoints, consistent spacing, balanced layouts
+
+**Column Layout**
+- **Purpose**: Positions content in columns
+- **Description**: Helps organize content horizontally with proper spacing and alignment
+- **Features**: Multi-column support, responsive behavior
+
+**Space Between**
+- **Purpose**: Helper component for consistent spacing
+- **Description**: Adds standardized spacing between elements following design system guidelines
+- **Features**: Consistent spacing, design token compliance
+
+### NAVIGATION COMPONENTS
+
+**Top Navigation**
+- **Purpose**: Global navigation element for services
+- **Description**: Consistent and persistent navigation across all service pages with identity, search, and utilities
+- **Features**: Global persistence, service integration, utility access
+
+**Side Navigation**
+- **Purpose**: Hierarchical navigation links
+- **Description**: Displays navigational links in collapsible sidebar format for application sections
+- **Features**: Hierarchical structure, collapsible design, accessibility
+
+**Breadcrumb**
+- **Purpose**: Shows navigation path and hierarchy
+- **Description**: Allows users to jump to specific page content via predefined anchor links
+- **Features**: Path visualization, quick navigation, hierarchy indication
+
+**Pagination**
+- **Purpose**: Horizontal navigation between collection pages
+- **Description**: Provides navigation controls for large datasets with page numbers and controls
+- **Features**: Page navigation, dataset management, accessibility
+
+**Tabs**
+- **Purpose**: Switch between information categories
+- **Description**: Allows users to switch between different categories of information in the same view
+- **Features**: Category organization, content switching, space efficiency
+
+### FORM & INPUT COMPONENTS
+
+**Form**
+- **Purpose**: Section with interactive controls for data submission
+- **Description**: Container for form elements that users can submit to web servers
+- **Features**: Data collection, validation support, accessibility
+
+**Form Field**
+- **Purpose**: Creates properly-styled form controls
+- **Description**: Wrapper component for consistent form element styling and layout
+- **Features**: Consistent styling, label association, error handling
+
+**Input**
+- **Purpose**: Single-line text input
+- **Description**: Allows users to input single lines of text with validation and formatting
+- **Features**: Text input, validation, accessibility, formatting
+
+**Textarea**
+- **Purpose**: Multi-line text input control
+- **Description**: Provides plain-text input control for longer text content
+- **Features**: Multi-line support, resizable, character limits
+
+**Select**
+- **Purpose**: Choose single item from list
+- **Description**: Enables users to choose one item from a dropdown list of options
+- **Features**: Single selection, searchable options, accessibility
+
+**Multiselect**
+- **Purpose**: Choose multiple items from list
+- **Description**: Enables users to select multiple items from a list of options
+- **Features**: Multiple selection, tagging, search functionality
+
+**Autosuggest**
+- **Purpose**: Choose from suggestion list
+- **Description**: Enables users to choose from dynamically filtered suggestions as they type
+- **Features**: Dynamic filtering, suggestion matching, keyboard navigation
+
+**Checkbox**
+- **Purpose**: Turn options on or off
+- **Description**: Enables users to select multiple options or toggle boolean states
+- **Features**: Multi-selection, boolean states, accessibility
+
+**Radio Group**
+- **Purpose**: Choose one option from predefined set
+- **Description**: Enables users to select exactly one option from a group of choices
+- **Features**: Single selection, group validation, accessibility
+
+**Toggle**
+- **Purpose**: Turn options on/off with immediate effect
+- **Description**: Provides immediate state changes for settings and features
+- **Features**: Immediate feedback, boolean control, accessibility
+
+**Date Picker**
+- **Purpose**: Date selection input
+- **Description**: Form element for entering date values with calendar interface
+- **Features**: Calendar popup, date validation, format support
+
+**Date Range Picker**
+- **Purpose**: Select date ranges
+- **Description**: Allows selection of start and end dates for filtering and reporting
+- **Features**: Range selection, validation, preset options
+
+**Time Input**
+- **Purpose**: Time value input
+- **Description**: Specialized input for time values with proper formatting
+- **Features**: Time validation, format support, accessibility
+
+**File Upload**
+- **Purpose**: File selection and upload
+- **Description**: Allows users to select local files for upload with drag-and-drop support
+- **Features**: Multiple file support, drag-and-drop, progress tracking
+
+**Slider**
+- **Purpose**: Select value within defined range
+- **Description**: Enables users to select numeric values using a sliding control
+- **Features**: Range definition, step increments, accessibility
+
+**Calendar**
+- **Purpose**: Date selection with calendar view
+- **Description**: Provides calendar interface for date selection and navigation
+- **Features**: Month/year navigation, date highlighting, accessibility
+
+### BUTTON & ACTION COMPONENTS
+
+**Button**
+- **Purpose**: Initiate actions in user interface
+- **Description**: Primary interaction element for triggering actions and navigation
+- **Features**: Multiple variants (primary, secondary, etc.), sizes, states
+
+**Button Dropdown**
+- **Purpose**: Group actions under one button
+- **Description**: Combines multiple related actions in a dropdown menu format
+- **Features**: Action grouping, space efficiency, hierarchy
+
+**Button Group**
+- **Purpose**: Perform action from group of buttons
+- **Description**: Enables users to select from a group of related toggle buttons
+- **Features**: Group selection, toggle states, accessibility
+
+**Link**
+- **Purpose**: Navigation and reference links
+- **Description**: Anchor tags for navigation and providing additional information
+- **Features**: External/internal links, styling variants, accessibility
+
+**Copy to Clipboard**
+- **Purpose**: Copy content to clipboard
+- **Description**: Allows users to copy text content to their system clipboard
+- **Features**: One-click copying, feedback indication, accessibility
+
+### DATA VISUALIZATION COMPONENTS
+
+**Table**
+- **Purpose**: Present data in tabular format
+- **Description**: Two-dimensional data display in columns and rows with sorting and filtering
+- **Features**: Sorting, filtering, pagination, responsive design
+
+**Area Chart**
+- **Purpose**: Visualize data series over time
+- **Description**: Shows part-to-whole relationships through stacked data series
+- **Features**: Multiple series, stacking, time-based data
+
+**Bar Chart**
+- **Purpose**: Visualize data with emphasis on totals
+- **Description**: Shows data series with focus on total amounts per data point
+- **Features**: Horizontal/vertical orientation, multiple series, comparison
+
+**Line Chart**
+- **Purpose**: Show data changes over time
+- **Description**: Visualizes data series with emphasis on trends and changes
+- **Features**: Multiple series, trend analysis, time-based data
+
+**Pie Chart**
+- **Purpose**: Show data relationships and correlations
+- **Description**: Visualizes part-to-whole relationships in circular format
+- **Features**: Percentage display, legend, interactive segments
+
+**Donut Chart**
+- **Purpose**: Show data relationships with center space
+- **Description**: Similar to pie chart but with hollow center for additional information
+- **Features**: Center content, percentage display, legend
+
+**Mixed Chart**
+- **Purpose**: Combine multiple chart types
+- **Description**: Allows combination of different visualization types in single chart
+- **Features**: Multiple chart types, dual axes, complex data relationships
+
+### FEEDBACK & STATUS COMPONENTS
+
+**Alert**
+- **Purpose**: Brief informational messages
+- **Description**: Provides information or instructs users to take specific actions
+- **Features**: Multiple severity levels, dismissible, action buttons
+
+**Flashbar**
+- **Purpose**: Page-level flash notifications
+- **Description**: Displays status of user actions like success, failure, warnings
+- **Features**: Multiple notifications, auto-dismiss, action buttons
+
+**Status Indicator**
+- **Purpose**: Communicate resource state
+- **Description**: Shows resource status in compact, embeddable form for cards, tables, lists
+- **Features**: Color coding, icon support, text labels
+
+**Badge**
+- **Purpose**: Label and categorize items
+- **Description**: Small, color-coded visual elements containing letters or numbers
+- **Features**: Color variants, size options, count indicators
+
+**Progress Bar**
+- **Purpose**: Show operation progress with known duration
+- **Description**: Informs users about progress of operations with completion percentage
+- **Features**: Percentage display, labeling, accessibility
+
+**Loading Bar**
+- **Purpose**: Linear loading indicator
+- **Description**: Shows progress for operations with unknown duration
+- **Features**: Indeterminate progress, smooth animation
+
+**Spinner**
+- **Purpose**: Compact loading animation
+- **Description**: Looped animation indicating ongoing processes
+- **Features**: Size variants, integration with other components
+
+### OVERLAY & MODAL COMPONENTS
+
+**Modal**
+- **Purpose**: Subordinate interface element
+- **Description**: Prevents main page interaction while keeping content visible
+- **Features**: Focus management, backdrop, dismissible
+
+**Popover**
+- **Purpose**: On-demand contextual information
+- **Description**: Provides contextual information about elements or events
+- **Features**: Positioning, dismissible, rich content
+
+**Drawer**
+- **Purpose**: Supplementary content panel
+- **Description**: Displays additional content supporting task completion or feature access
+- **Features**: Slide-in animation, positioning options, resizable
+
+### SPECIALIZED COMPONENTS
+
+**Annotation Context**
+- **Purpose**: Invisible tutorial tracking layer
+- **Description**: Tracks tutorial progress and feeds dynamic content to Tutorial panel
+- **Features**: Tutorial integration, progress tracking, dynamic content
+
+**Hotspot**
+- **Purpose**: Tutorial interaction markers
+- **Description**: Invisible containers marking spots for hotspot icons in tutorials
+- **Features**: Tutorial integration, positioning, visibility control
+
+**Tutorial Panel**
+- **Purpose**: Houses hands-on tutorials
+- **Description**: Contains contextual tutorials helping users learn service usage
+- **Features**: Tutorial states, progress tracking, step navigation
+
+**Code Editor**
+- **Purpose**: Code writing and editing
+- **Description**: Allows users to write and edit code with syntax highlighting
+- **Features**: Syntax highlighting, multiple languages, accessibility
+
+**Code View**
+- **Purpose**: Code display and copying
+- **Description**: Allows users to read and copy code snippets
+- **Features**: Syntax highlighting, copy functionality, language support
+
+**Attribute Editor**
+- **Purpose**: Edit key-value attributes
+- **Description**: Allows editing of resource attributes in key-value format
+- **Features**: Add/remove attributes, validation, accessibility
+
+**Tag Editor**
+- **Purpose**: Create, edit, delete resource tags
+- **Description**: Extension of attribute editor with integrated tag logic
+- **Features**: Tag management, validation, auto-suggestions
+
+**Key-Value Pairs**
+- **Purpose**: Display property lists
+- **Description**: Shows lists of properties (labels) with corresponding values
+- **Features**: Structured display, responsive layout, accessibility
+
+**Cards**
+- **Purpose**: Collection of resources representation
+- **Description**: Represents collections of resources in card-based layout
+- **Features**: Resource grouping, action integration, responsive grid
+
+**Tiles**
+- **Purpose**: Option selection with metadata
+- **Description**: Enables selection from predefined options with additional metadata
+- **Features**: Rich content, comparison support, selection states
+
+**Chat Message**
+- **Purpose**: Visual chat message representation
+- **Description**: Displays chat messages in conversation interfaces
+- **Features**: Message formatting, sender identification, timestamps
+
+### FILTERING & SEARCH COMPONENTS
+
+**Property Filter**
+- **Purpose**: Complex item filtering
+- **Description**: Find items using properties, values, free text, and operators
+- **Features**: Advanced filtering, operator support, free text search
+
+**Text Filter**
+- **Purpose**: Text-based item filtering
+- **Description**: Enter text to match specific items in collections
+- **Features**: Text matching, real-time filtering, accessibility
+
+**Collection Select Filter**
+- **Purpose**: Property-based item filtering
+- **Description**: Find items by choosing one or two properties from dropdown
+- **Features**: Property selection, dual property support, collection integration
+
+**Collection Preferences**
+- **Purpose**: Manage display preferences
+- **Description**: Allows users to manage display preferences within collections
+- **Features**: Column selection, page size, density settings
+
+**Prompt Input**
+- **Purpose**: Provide prompts or commands
+- **Description**: Enables users to provide prompts or commands to AI systems
+- **Features**: Command input, suggestion support, history
+
+**Support Prompt Group**
+- **Purpose**: Selectable message prompts
+- **Description**: Presents recommended inputs in generative AI chats
+- **Features**: Prompt templates, quick selection, AI integration
+
+### SPECIALIZED AWS COMPONENTS
+
+**S3 Resource Selector**
+- **Purpose**: S3 bucket interaction
+- **Description**: Provides ability to read/write objects from S3 buckets with prefix support
+- **Features**: Bucket browsing, object selection, prefix filtering
+
+**Segmented Control**
+- **Purpose**: Toggle content formatting
+- **Description**: Toggle between different ways of formatting content or data
+- **Features**: Multiple options, toggle behavior, formatting control
+
+### UTILITY & HELPER COMPONENTS
+
+**Header**
+- **Purpose**: Content summary and actions
+- **Description**: Summarizes displayed content and provides space for action buttons
+- **Features**: Title display, action integration, responsive layout
+
+**Help Panel**
+- **Purpose**: Contextual help content
+- **Description**: Displays help content related to concepts, terms, settings, or tasks
+- **Features**: Contextual information, expandable content, accessibility
+
+**Split Panel**
+- **Purpose**: Secondary information access
+- **Description**: Collapsible panel for secondary information implementing split view pattern
+- **Features**: Collapsible design, split view support, responsive behavior
+
+**Wizard**
+- **Purpose**: Multi-page form guidance
+- **Description**: Guides users through complex flows and interrelated tasks
+- **Features**: Step navigation, progress tracking, validation
+
+**Board Components**
+- **Purpose**: Configurable layout base
+- **Description**: Provides foundation for configurable layouts with drag-and-drop
+- **Features**: Drag-and-drop, responsiveness, grid system
+
+**Items Palette**
+- **Purpose**: Add board items
+- **Description**: Provides ability to add board items when combined with discrete split panel
+- **Features**: Item management, board integration, drag-and-drop
+
+**Task List**
+- **Purpose**: Display list of tasks
+- **Description**: Shows structured list of tasks with status and actions
+- **Features**: Task organization, status indicators, action integration
+
+**Icon**
+- **Purpose**: Display consistent icons
+- **Description**: Basic icons matching Cloudscape's sizes, colors, and typography
+- **Features**: Size variants, color options, accessibility
+
+## Technical Specifications
+
+### Framework & Technology
+- **Framework**: React-based components with TypeScript support
+- **Testing**: All components are tested, responsive, and accessible
+- **Browser Support**: Chrome, Firefox, Edge, Safari
+- **License**: Apache 2.0 License (Open Source)
+- **Package Manager**: Available on npm under @cloudscape-design scope
+
+### Design Principles
+- **Atomic Design**: Built on atomic design principles for component composition
+- **Accessibility**: WCAG compliance with comprehensive accessibility features
+- **Responsive Design**: Multiple breakpoint support for all screen sizes
+- **Theming**: Light and dark mode support with customizable themes
+- **Typography**: Consistent typography scale using Open Sans font
+- **Spacing**: 4px base unit system with incremental scaling
+- **Color System**: Comprehensive color palette with semantic color tokens
+
+### State Management
+- **Controlled Components**: All components support controlled state management
+- **Event Handling**: Comprehensive event system for user interactions
+- **Validation**: Built-in validation support for form components
+- **Accessibility**: Screen reader support and keyboard navigation
+
+### Integration Features
+- **Design Tokens**: 70+ predefined design tokens for consistency
+- **Figma Integration**: Complete Figma design library available
+- **Testing Support**: Built-in testing utilities and frameworks
+- **Documentation**: Comprehensive API documentation with interactive playground
+- **Examples**: 20+ demos showing real-world implementation patterns
+
+## Usage Context
+Cloudscape is specifically optimized for:
+- AWS Management Console extensions
+- Cloud management interfaces
+- Enterprise dashboards and admin panels
+- Data-heavy applications requiring tables and charts
+- Complex workflows requiring wizards and multi-step forms
+- Applications requiring consistent AWS visual language
+
+The design system provides a complete foundation for building professional web applications with the same look, feel, and user experience as AWS services, making it ideal for cloud-native applications and enterprise software solutions.
