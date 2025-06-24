@@ -9,34 +9,71 @@ const server = new FastMCP({
 
 
 // Tools 
+
 server.addTool({
-  name: "read_components",
-  description: "Read the components list resource",
-  parameters: z.object({}),
-  execute: async () => {
+  name: "getDomainPrices",
+  description: "Get pricing information for domain TLDs (Top Level Domains)",
+  parameters: z.object({
+    tlds: z.array(z.string()).describe("Array of TLD strings to check prices for (e.g., ['co.za', 'com', 'net'])"),
+  }),
+  execute: async (args) => {
+    const baseUrl = 'https://nkpfrka0ek.execute-api.eu-west-1.amazonaws.com/prod/savvysites/getDomainPrices';
+    const tldsParam = args.tlds.join(',');
+    const url = `${baseUrl}?tldsToCheck=${tldsParam}`;
+    
     try {
-      const content = await readFile('/Users/ahmed/Documents/AUX/Clients/Livingston/mcpserver/resources/components.txt', 'utf-8');
-      return content;
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      return JSON.stringify(data, null, 2);
     } catch (error) {
-      return `Error reading file: `;
+      throw new Error(`Error fetching domain prices: ${error instanceof Error ? error.message : String(error)}`);
     }
   },
 });
 
+// Domain availability tool
 server.addTool({
-  name: "add",
-  description: "Add two numbers",
+  name: "checkDomainAvailability",
+  description: "Check if a domain name is available for registration",
   parameters: z.object({
-    a: z.number(),
-    b: z.number(),
+    domain: z.string().describe("The full domain name to check availability for (e.g., 'example.co.za')"),
   }),
   execute: async (args) => {
-    return String(args.a + args.b);
+    const baseUrl = 'https://nkpfrka0ek.execute-api.eu-west-1.amazonaws.com/prod/savvysites/checkDomainAvailability';
+    const url = `${baseUrl}?domain=${encodeURIComponent(args.domain)}`;
+    
+    try {
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      return JSON.stringify(data, null, 2);
+    } catch (error) {
+      throw new Error(`Error checking domain availability: ${error instanceof Error ? error.message : String(error)}`);
+    }
   },
 });
 
 
-// Prompts 
+// Prompts
 
 server.addPrompt({
   name: "find-components",
@@ -57,7 +94,7 @@ server.addPrompt({
   name: "git-release-notes",
   description: "Generate release notes for latest commit",
   load: async (args) => {
-    return `Please generate comprehensive and professional release notes based on the latest commits to github. save these release notes inside a folder called "release-notes". the saved file should be called 'release-notes.txt'`;
+    return `Please generate professional release notes based on the latest commit to github. The notes should be concise but descriptive. Use the gitlog in this folder to determine the account name and repo. save these release notes inside a folder called "release-notes". the saved file should be called 'release-notes.txt'. If the file already exists, add the new release notes as an entry at the top of the file`;
   },
 });
 
