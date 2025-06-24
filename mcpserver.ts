@@ -94,7 +94,29 @@ server.addPrompt({
   name: "git-release-notes",
   description: "Generate release notes for latest commit",
   load: async (args) => {
-    return `Please generate professional release notes based on the latest commit to github. The notes should be concise but descriptive. Use the gitlog in this folder to determine the account name and repo. save these release notes inside a folder called "release-notes". the saved file should be called 'release-notes.txt'. If the file already exists, add the new release notes as an entry at the top of the file`;
+    return `Please generate professional release notes detailing the latest additions to the code based on the latest commit to github. 
+    The notes should be concise but descriptive. The notes should be written in the following json format: "notes": [
+            {
+                "date": "12 June 2025",
+                "entries": [
+                    {
+                        "title": "Notes title",
+                        "description": ["description of change"]
+                    }
+                ]
+            },
+            {
+                "date": "7 June 2025",
+                "entries": [
+                    {
+                        "title": "notes title",
+                        "description": ["description of change 1", "Description of change 2"]
+                    }
+                ]
+            },
+    Use the gitlog in this folder to determine the account name and repo. save these release notes inside a folder called "release-notes".
+    The saved file should be called 'release-notes.txt'. 
+    If the file already exists, add the new release notes as an entry at the top of the existing notes json`;
   },
 });
 
