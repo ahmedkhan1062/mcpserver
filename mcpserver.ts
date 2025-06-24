@@ -11,7 +11,37 @@ const server = new FastMCP({
 // Tools 
 
 server.addTool({
-  name: "getDomainPrices",
+  name: "check-domain-availability",
+  description: "Check if a domain name is available for registration",
+  parameters: z.object({
+    domain: z.string().describe("The full domain name to check availability for (e.g., 'example.co.za')"),
+  }),
+  execute: async (args) => {
+    const baseUrl = 'https://nkpfrka0ek.execute-api.eu-west-1.amazonaws.com/prod/savvysites/checkDomainAvailability';
+    const url = `${baseUrl}?domain=${encodeURIComponent(args.domain)}`;
+    
+    try {
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      return JSON.stringify(data, null, 2);
+    } catch (error) {
+      throw new Error(`Error checking domain availability: ${error instanceof Error ? error.message : String(error)}`);
+    }
+  },
+});
+
+server.addTool({
+  name: "get-domain-prices",
   description: "Get pricing information for domain TLDs (Top Level Domains)",
   parameters: z.object({
     tlds: z.array(z.string()).describe("Array of TLD strings to check prices for (e.g., ['co.za', 'com', 'net'])"),
@@ -41,36 +71,6 @@ server.addTool({
   },
 });
 
-// Domain availability tool
-server.addTool({
-  name: "checkDomainAvailability",
-  description: "Check if a domain name is available for registration",
-  parameters: z.object({
-    domain: z.string().describe("The full domain name to check availability for (e.g., 'example.co.za')"),
-  }),
-  execute: async (args) => {
-    const baseUrl = 'https://nkpfrka0ek.execute-api.eu-west-1.amazonaws.com/prod/savvysites/checkDomainAvailability';
-    const url = `${baseUrl}?domain=${encodeURIComponent(args.domain)}`;
-    
-    try {
-      const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      return JSON.stringify(data, null, 2);
-    } catch (error) {
-      throw new Error(`Error checking domain availability: ${error instanceof Error ? error.message : String(error)}`);
-    }
-  },
-});
 
 
 // Prompts
