@@ -1,0 +1,204 @@
+ATLASSIAN DESIGN SYSTEM - COMPONENT DOCUMENTATION
+============================================================
+
+This document contains detailed descriptions of 5 key components from the Atlassian Design System, a comprehensive design language used to create simple, intuitive, and beautiful experiences across Atlassian products.
+
+============================================================
+
+1. BUTTON COMPONENT
+-------------------
+
+Description:
+A button triggers an event or action. They let users know what will happen next. Buttons are fundamental interactive elements that enable users to perform actions throughout the interface.
+
+Key Features:
+- Multiple appearance variants: primary, default, subtle, warning, danger
+- Support for icons before or after text labels
+- Various states: default, disabled, loading
+- Built-in accessibility features
+- Support for different sizes and responsive behavior
+
+Usage Guidelines:
+- Use primary buttons for main call-to-action elements (only one per area)
+- Use default buttons for most secondary actions
+- Use subtle buttons alongside primary buttons for actions like "Cancel"
+- Use warning buttons for actions that may cause significant changes
+- Use danger buttons for destructive and irreversible actions like deleting
+
+Technical Implementation:
+- Available as React component: @atlaskit/button
+- Supports common props and additional customization
+- LinkButton variant available for navigation
+- LoadingButton variant for async operations
+
+Accessibility Considerations:
+- Avoid disabling buttons in forms; use validation instead
+- Include proper ARIA labels and descriptions
+- Ensure adequate color contrast
+- Support keyboard navigation
+
+============================================================
+
+2. BADGE COMPONENT
+------------------
+
+Description:
+A badge is a visual indicator for numeric values such as tallies and scores. Badges provide quick visual feedback about counts, statuses, or other numeric information associated with UI elements.
+
+Key Features:
+- Compact design that fits seamlessly into UI
+- Support for different appearances: primary, added, removed, important
+- Configurable maximum value display (default max: 99)
+- Text and numeric content support
+- Various color schemes for different contexts
+
+Usage Guidelines:
+- Use badges to display notification counts, status indicators, or tallies
+- Position badges near related UI elements for clear association
+- Use appropriate appearance variants to convey meaning (added for positive, removed for negative)
+- Keep badge content concise - prefer numbers over text when possible
+- Use max prop to cap displayed values for better readability
+
+Technical Implementation:
+- Available as React component: @atlaskit/badge
+- BadgeFormat component available for custom badge composition
+- BadgeContainer component for styling without formatting
+- Support for responsive design and theming
+
+Accessibility Considerations:
+- Use badges in conjunction with clear labels to avoid ambiguity
+- Ensure sufficient color contrast for readability
+- Provide alternative text for screen readers when necessary
+- Consider users with color vision deficiencies
+
+============================================================
+
+3. MODAL DIALOG COMPONENT
+-------------------------
+
+Description:
+A modal dialog displays content that requires user interaction, in a layer above the page. Modals interrupt the user's workflow to focus attention on specific tasks or information that requires immediate attention.
+
+Key Features:
+- Layered presentation above main content
+- Customizable header, body, and footer sections
+- Built-in dismiss functionality (ESC key, close button, overlay click)
+- Support for different modal types: default, warning, danger
+- Responsive design across different screen sizes
+
+Usage Guidelines:
+- Use modals for critical information that requires immediate user attention
+- Keep modal content focused and relevant to the specific task
+- Always provide clear ways to dismiss the modal
+- Use warning modals before significant changes
+- Avoid nesting modals or using them for non-essential information
+
+Technical Implementation:
+- Available as React component with subcomponents:
+  - Modal (main container)
+  - ModalHeader (customizable header)
+  - ModalBody (main content area)
+  - ModalFooter (action buttons)
+  - ModalTransition (animation wrapper)
+- Built-in form support for submit buttons
+- Proper focus management and keyboard navigation
+
+Accessibility Considerations:
+- Must have accessible title or label
+- Focus management: trap focus within modal
+- Support keyboard navigation (Tab, Shift+Tab, ESC)
+- Provide multiple dismiss methods
+- Use proper ARIA attributes for screen readers
+- Prevent interaction with background content
+
+============================================================
+
+4. FLAG COMPONENT
+-----------------
+
+Description:
+A flag is used for confirmations, alerts, and acknowledgments that require minimal user interaction, often displayed using a flag group. Flags provide temporary feedback messages that appear prominently but don't block user interaction.
+
+Key Features:
+- Non-blocking notification system
+- Multiple appearance variants for different message types
+- Auto-dismiss functionality available
+- Support for icons and action buttons
+- Grouping capabilities for multiple messages
+
+Usage Guidelines:
+- Use flags for success confirmations, error messages, and informational alerts
+- Keep flag content brief and actionable
+- Use appropriate appearance variants to match message severity
+- Implement auto-dismiss for non-critical messages
+- Group related flags together using FlagGroup component
+
+Technical Implementation:
+- Available as React component: @atlaskit/flag
+- FlagGroup component for managing multiple flags
+- AutoDismissFlag component for time-based dismissal
+- FlagsProvider for centralized flag management
+- Support for custom actions and styling
+
+Accessibility Considerations:
+- Ensure flags are announced by screen readers
+- Use appropriate ARIA live regions for dynamic content
+- Provide clear action buttons when user response is needed
+- Maintain sufficient color contrast for all flag variants
+- Consider users who may miss auto-dismiss timing
+
+============================================================
+
+5. TOOLTIP COMPONENT
+--------------------
+
+Description:
+A tooltip is a floating, non-actionable label used to explain a user interface element or feature. Tooltips provide contextual help and additional information without cluttering the main interface.
+
+Key Features:
+- Floating presentation near target elements
+- Multiple positioning options (top, bottom, left, right)
+- Hover and focus trigger support
+- Responsive positioning to stay within viewport
+- Support for rich content and custom styling
+
+Usage Guidelines:
+- Use tooltips for explanatory text and additional context
+- Keep tooltip content concise and helpful
+- Avoid tooltips for essential information
+- Don't use tooltips on mobile devices (use alternative patterns)
+- Ensure tooltips don't cover important interface elements
+
+Technical Implementation:
+- Available as React component: @atlaskit/tooltip
+- Built on React Popper for positioning
+- Support for controlled and uncontrolled usage
+- Customizable delay and animation settings
+- Integration with other ADS components
+
+Accessibility Considerations:
+- Tooltips should be discoverable via keyboard navigation
+- Content must be accessible to screen readers
+- Provide alternative ways to access tooltip information
+- Use proper ARIA attributes (aria-describedby)
+- Ensure tooltips work with keyboard and mouse interaction
+- Consider users with motor disabilities who may struggle with hover states
+
+============================================================
+
+DESIGN SYSTEM PHILOSOPHY
+------------------------
+
+The Atlassian Design System emphasizes:
+- Consistency across all Atlassian products
+- Accessibility as a core principle
+- Responsive design for all devices
+- Clear visual hierarchy and communication
+- Efficient collaboration between designers and developers
+- Continuous evolution based on user needs and feedback
+
+These components work together to create cohesive, accessible, and intuitive user experiences across the entire Atlassian product ecosystem, from Jira and Confluence to Trello and Bitbucket.
+
+============================================================
+Document created: June 24, 2025
+Source: Atlassian Design System (https://atlassian.design)
