@@ -2,6 +2,7 @@
   "name": "livingston-mcp-server",
   "version": "1.0.0",
   "description": "Livingston MCP server",
+  "type": "module",
   "main": "dist/mcpserver.js",
   "files": [
     "dist",
