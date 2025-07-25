@@ -1,0 +1,56 @@
+{
+    "notes": [
+        {
+            "date": "24 June 2025",
+            "entries": [
+                {
+                    "title": "Documentation Update",
+                    "description": ["Updated README.md with project documentation"]
+                },
+                {
+                    "title": "Server Code Restructuring",
+                    "description": ["Reorganized server code structure for better maintainability"]
+                },
+                {
+                    "title": "Enhanced Prompt System",
+                    "description": [
+                        "Added 'clever claude' prompt for intellectual sparring partner functionality",
+                        "Refined git-release-notes prompt with improved formatting specifications",
+                        "Updated find-components prompt for design system documentation",
+                        "Removed unused files to clean up codebase"
+                    ]
+                },
+                {
+                    "title": "Design System Integration",
+                    "description": [
+                        "Added Atlassian Cloudscape design system components integration",
+                        "Created resource endpoint for components list with proper file handling"
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "23 June 2025",
+            "entries": [
+                {
+                    "title": "Initial MCP Server Implementation",
+                    "description": [
+                        "Created research MCP server with FastMCP framework",
+                        "Implemented domain availability checking tool with AWS Lambda integration",
+                        "Added domain pricing tool for TLD price queries",
+                        "Set up TypeScript configuration and build system",
+                        "Configured stdio transport for MCP communication"
+                    ]
+                },
+                {
+                    "title": "Project Setup",
+                    "description": [
+                        "Initialized Git repository",
+                        "Created package.json with dependencies for axios, fastmcp, xml2js, and zod",
+                        "Set up development environment with ts-node and TypeScript"
+                    ]
+                }
+            ]
+        }
+    ]
+}
