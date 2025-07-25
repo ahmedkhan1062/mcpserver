@@ -6,7 +6,7 @@ import { readdirSync, statSync } from 'fs';
 import path from 'path';
 
 
-const PDF_DIRECTORY = "/Users/ahmed/Documents/AUX/Clients/Livingston/mcpserver/resources/livingston pdfs";
+const PDF_DIRECTORY = "./resources/livingston pdfs";
 const PORT = process.env.PORT || 8080;
 const server = new FastMCP({
   name: "My Server",
