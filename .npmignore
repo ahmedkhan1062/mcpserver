@@ -1,0 +1,39 @@
+# Source files (only distribute compiled JS)
+src/
+test/
+coverage/
+
+# Development files
+tsconfig.json
+jest.config.js
+.eslintrc.js
+*.tsbuildinfo
+
+# Environment and config
+.env*
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.github/
+
+# Development dependencies
+node_modules/
+
+# Testing
+coverage/
+.nyc_output
+
+# Temporary files
+.tmp/
+tmp/
